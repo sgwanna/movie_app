@@ -6,6 +6,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-infinite-scroll-component": "^4.1.0",
     "react-lines-ellipsis": "^0.13.0",
     "react-scripts": "1.1.4"
   },
