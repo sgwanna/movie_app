@@ -21,7 +21,7 @@ class Movie extends Component {
   }
 }
 */
-function Movie({title, poster, genres, synopsis}) {
+function Movie({title, poster, genres, synopsis, torrents}) {
   return (
     <div className="Movie">
       <div className="Movie_Columns">
@@ -35,13 +35,26 @@ function Movie({title, poster, genres, synopsis}) {
           <div className="Movie_Synopsis">
             <LinesEllipsis
               text={synopsis}
-              maxLine='3'
+              maxLine='4'
               ellipsis=' ...'
               trimRight
               basedOn='letters'
             />
           </div>
+          <div className="Movie_Torrents">
+            {torrents.map((torrent,index) => <MovieTorrent torrent={torrent} index={index+1} key={index}/>)}
+          </div>
       </div>
+    </div>
+  )
+}
+
+function MovieTorrent({torrent, index}) {
+  return (
+    <div className="Movie_Torrent">
+      <span className="Torrent_Index">
+          <a href={torrent.url}>Torrent #{index}</a>
+      </span>
     </div>
   )
 }

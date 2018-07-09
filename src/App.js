@@ -38,6 +38,7 @@ class App extends Component {
                     poster={movie.medium_cover_image}
                     genres={movie.genres}
                     synopsis = {movie.synopsis}
+                    torrents = {movie.torrents}
             />
     });
 
